@@ -1,8 +1,20 @@
 package com.in28minutes.springboot.learnjpaandhibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
+    @Id
     private long id;
+    //the following annotation is not necessary as the attribute has the same name as the column in db
+    @Column(name="name")
     private String name;
+    //the following annotation is not necessary as the attribute has the same name as the column in db
+    @Column(name="author")
+    private String author;
+
 
     public Course() {
     }
@@ -38,7 +50,6 @@ public class Course {
         this.author = author;
     }
 
-    private String author;
 
     @Override
     public String toString() {

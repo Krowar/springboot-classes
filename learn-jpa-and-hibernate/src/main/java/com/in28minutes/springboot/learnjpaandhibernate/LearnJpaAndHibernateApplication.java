@@ -1,5 +1,6 @@
 package com.in28minutes.springboot.learnjpaandhibernate;
 
+import com.in28minutes.springboot.learnjpaandhibernate.book.Book;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +10,5 @@ public class LearnJpaAndHibernateApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LearnJpaAndHibernateApplication.class, args);
 	}
-
+	Book book = new Book();
 }
