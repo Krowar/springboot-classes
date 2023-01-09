@@ -5,17 +5,17 @@ import java.time.LocalDate;
 public class Todo {
     private int id;
     private String author;
-    private String title;
-    private LocalDate todoDate;
+    private String description;
+    private LocalDate targetDate;
 
-    private Boolean completed;
+    private Boolean done;
 
-    public Todo(int id, String author, String title, LocalDate todoDate, Boolean completed) {
+    public Todo(int id, String author, String description, LocalDate targetDate, Boolean done) {
         this.id = id;
         this.author = author;
-        this.title = title;
-        this.todoDate = todoDate;
-        this.completed = completed;
+        this.description = description;
+        this.targetDate = targetDate;
+        this.done = done;
     }
 
     public int getId() {
@@ -34,28 +34,28 @@ public class Todo {
         this.author = author;
     }
 
-    public String getTitle() {
-        return title;
+    public String getDescription() {
+        return description;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public LocalDate getTodoDate() {
-        return todoDate;
+    public LocalDate getTargetDate() {
+        return targetDate;
     }
 
-    public void setTodoDate(LocalDate todoDate) {
-        this.todoDate = todoDate;
+    public void setTargetDate(LocalDate targetDate) {
+        this.targetDate = targetDate;
     }
 
-    public Boolean getCompleted() {
-        return completed;
+    public Boolean getDone() {
+        return done;
     }
 
-    public void setCompleted(Boolean completed) {
-        this.completed = completed;
+    public void setDone(Boolean done) {
+        this.done = done;
     }
 
     @Override
@@ -63,9 +63,9 @@ public class Todo {
         return "Todo{" +
                 "id=" + id +
                 ", author='" + author + '\'' +
-                ", title='" + title + '\'' +
-                ", todoDate=" + todoDate +
-                ", completed=" + completed +
+                ", title='" + description + '\'' +
+                ", todoDate=" + targetDate +
+                ", completed=" + done +
                 '}';
     }
 }

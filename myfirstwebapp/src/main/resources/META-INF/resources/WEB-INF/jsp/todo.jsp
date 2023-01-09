@@ -5,12 +5,16 @@
         <script src="webjars/jquery/3.6.1/jquery.min.js"></script>
     </head>
     <body>
-        <h1>Welcome to the todo site</h1>
+        <h1>Here we go, let's add a todo'</h1>
 		<div class="container">
-			<h1>Welcome ${name}</h1>
-			<a href="list-todos">Manage</a> your todos
+			<h1>Login</h1>
+			<pre>${error}</pre>
+			<form method="post">
+				Author: <input type="text" name="author">
+				Description: <input type="text" name="description">
+				Target date: <input type="text" name="targetDate">
+				<input type="submit">
+			</form>
 		</div>
-
-        </form>
     </body>
  </html>
