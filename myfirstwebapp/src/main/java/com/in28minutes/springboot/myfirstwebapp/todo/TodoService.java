@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 @Service
@@ -35,4 +36,17 @@ public class TodoService {
     }
 
 
+    public void deleteTodo(Todo todo){
+        todos.remove(todo);
+    }
+
+
+    public  Todo findById(int todoId) {
+         Todo todoToReturn = todos.stream().filter(todo -> todo.getId() == todoId).findAny().orElse(null);
+         return todoToReturn;
+    }
+
+    public void updateTodo(Todo todo, String newDescription) {
+        todo.setDescription(newDescription);
+    }
 }

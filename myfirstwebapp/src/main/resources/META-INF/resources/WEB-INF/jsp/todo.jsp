@@ -9,11 +9,14 @@
 		<div class="container">
 			<h1>Login</h1>
 			<pre>${error}</pre>
-			<form method="post">
-				Description: <input type="text" name="description" required="required">
-				Target date: <input type="text" name="targetDate">
-				<input type="submit">
-			</form>
-		</div>
+		<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+        			<form:form method="post" modelAttribute="todo">
+        				Description: <form:input type="text" path="description"
+        								required="required"/>
+        				<form:errors  path="description" cssClass="text-warning"/>
+        				<form:input type="hidden" path="id"/>
+        				<form:input type="hidden" path="done"/>
+        				<input type="submit">
+        			</form:form>
     </body>
  </html>
