@@ -11,7 +11,7 @@
 			<pre>${error}</pre>
 			<form method="post">
 				Author: <input type="text" name="author">
-				Description: <input type="text" name="description">
+				Description: <input type="text" name="description" required="required">
 				Target date: <input type="text" name="targetDate">
 				<input type="submit">
 			</form>
