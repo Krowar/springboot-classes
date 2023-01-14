@@ -34,14 +34,12 @@ public class TodoController {
     }
 
     @RequestMapping(value="todo", method= RequestMethod.POST)
-    public String addTodo(@RequestParam String author, @RequestParam String description , @RequestParam String targetDate,
+    public String addTodo( @RequestParam String description , @RequestParam String targetDate,
                           ModelMap model){
-
+        //System.out.println((String)model.get("name"));
         List<Todo> todos = this.todoService.findByUsername("Gerald");
-        this.todoService.addTodo(new Todo(todos.size()+1, author, description, LocalDate.now().plusYears(4), false));
-        List<Todo> newTodos = this.todoService.findByUsername("Gerald");
-        model.addAttribute("todos", newTodos);
-        return "todoList";
+        this.todoService.addTodo(new Todo(todos.size()+1, (String)model.get("name"), description, LocalDate.now().plusYears(4), false));
+        return "redirect:list-todos";
     }
 
 }
