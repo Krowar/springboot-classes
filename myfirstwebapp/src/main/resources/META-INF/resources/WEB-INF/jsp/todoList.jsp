@@ -1,13 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<html>
-	<head>
-		<link href="webjars/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" >
-        <script src="webjars/bootstrap/5.2.3/js/bootstrap.min.js"></script>
-        <script src="webjars/jquery/3.6.1/jquery.min.js"></script>
-		<title>List Todos Page</title>
-	</head>
-	<body>
+        <%@ include file="common/header.jspf" %>
+    <body>
+    <%@ include file="common/navigation.jspf" %>
 		<div class="container">
 			<h1>Your Todos</h1>
 			<table class="table">
@@ -40,7 +33,6 @@
 
 		</div>
 
-
-
+        <%@ include file="common/footer.jspf" %>
 	</body>
 </html>

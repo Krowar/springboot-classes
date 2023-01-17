@@ -17,20 +17,10 @@ public class LoginController {
         this.authenticationController = authenticationController;
     }
 
-    @RequestMapping(value="/login", method= RequestMethod.GET)
-    public String login(){
-        return "login";
+    @RequestMapping(value="/", method= RequestMethod.GET)
+    public String login(ModelMap model){
+        model.put("name", "Frenchie");
+        return "welcome";
     }
 
-    @RequestMapping(value="/login", method= RequestMethod.POST)
-    public String welcome(@RequestParam String name, @RequestParam String password, ModelMap model){
-        if(this.authenticationController.checkAuthentication(name,password)){
-            model.put("name", name);
-            return "welcome";
-        }
-        else{
-            model.put("error", "Wrong username or password");
-            return "login";
-        }
-    }
 }

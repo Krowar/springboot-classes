@@ -46,7 +46,9 @@ public class TodoService {
          return todoToReturn;
     }
 
-    public void updateTodo(Todo todo, String newDescription) {
-        todo.setDescription(newDescription);
+    public void updateTodo(Todo todo, Todo newTodo) {
+        todo.setDescription(newTodo.getDescription());
+        todo.setTargetDate(newTodo.getTargetDate());
+        todo.setDone(newTodo.getDone());
     }
 }

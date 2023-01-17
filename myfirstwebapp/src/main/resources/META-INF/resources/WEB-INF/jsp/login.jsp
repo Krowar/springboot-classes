@@ -1,10 +1,6 @@
- <html>
-    <head>
-        <link href="webjars/bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet" >
-        <script src="webjars/bootstrap/5.2.3/js/bootstrap.min.js"></script>
-        <script src="webjars/jquery/3.6.1/jquery.min.js"></script>
-    </head>
+        <%@ include file="common/header.jspf" %>
     <body>
+    <%@ include file="common/navigation.jspf" %>
         <h1>Please enter the login</h1>
 		<div class="container">
 			<h1>Login</h1>
@@ -15,5 +11,6 @@
 				<input type="submit">
 			</form>
 		</div>
+		        <%@ include file="common/footer.jspf" %>
     </body>
  </html>

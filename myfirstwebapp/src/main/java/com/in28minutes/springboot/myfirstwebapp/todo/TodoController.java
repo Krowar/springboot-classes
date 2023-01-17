@@ -50,7 +50,7 @@ public class TodoController {
         }
         else{
             List<Todo> todos = todoService.findByUsername("Gerald");
-            todoService.addTodo(new Todo(todos.size()+1, (String)model.get("name"), todo.getDescription(), LocalDate.now().plusYears(4), false));
+            todoService.addTodo(new Todo(todos.size()+1, (String)model.get("name"), todo.getDescription(), todo.getTargetDate(), false));
             return "redirect:list-todos";
         }
 
@@ -72,7 +72,7 @@ public class TodoController {
         }
         else{
             Todo todoToUpdate = todoService.findById(todo.getId());
-            todoService.updateTodo(todoToUpdate, todo.getDescription());
+            todoService.updateTodo(todoToUpdate, todo);
             return "redirect:list-todos";
         }
 
