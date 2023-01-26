@@ -1,14 +1,11 @@
 package com.in28minutes.springboot.myfirstwebapp.todo;
 
 
-import org.springframework.cglib.core.Local;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
-import java.util.logging.Logger;
 
 @Service
 public class TodoService {
@@ -23,7 +20,7 @@ public class TodoService {
     }
 
     public List<Todo> findByUsername(String name){
-        List<Todo> todosToReturn = todos.stream().filter(todo -> todo.getAuthor().equalsIgnoreCase(name)).toList();
+        List<Todo> todosToReturn = todos.stream().filter(todo -> todo.getUsername().equalsIgnoreCase(name)).toList();
         return todosToReturn;
     }
 
